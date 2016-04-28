@@ -42,4 +42,4 @@ var libConfig = {
   }
 }
 
-module.exports = ( SCRIPT_NAME == 'build' || SCRIPT_NAME == 'prepublish' ) ? libConfig : exampleConfig;
+module.exports = ( SCRIPT_NAME == 'build' || SCRIPT_NAME == 'build:prod' ) ? libConfig : exampleConfig;

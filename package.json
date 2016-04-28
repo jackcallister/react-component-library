@@ -4,12 +4,11 @@
   "description": "",
   "main": "lib/library.js",
   "scripts": {
-    "start": "npm run build & npm run build:example & npm run serve",
-    "build": "node_modules/.bin/webpack --watch",
-    "build:example": "node_modules/.bin/webpack --watch",
-    "serve": "cd example && python -m SimpleHTTPServer",
-    "preinstall": "rm -rf lib & rm -rf example/lib",
-    "prepublish": "node_modules/.bin/webpack"
+    "start": "npm run build:prod && npm run build & npm run build:example & npm run serve",
+    "build": "webpack --watch",
+    "build:prod": "webpack",
+    "build:example": "webpack --watch",
+    "serve": "cd example && python -m SimpleHTTPServer"
   },
   "author": "Jack Callister",
   "license": "ISC",
